@@ -7,3 +7,8 @@ function driverNamesWithRevenueOver (array, integer) {
   let newarray = driversWithRevenueOver(array, integer).map(function (element) { return element['name'];});
   return newarray
 }
+
+function exactMatch (array, object) {
+  let key = Object.keys(object)[0];
+  return array.filter(function (element) {return element.key === object.key;});
+}
